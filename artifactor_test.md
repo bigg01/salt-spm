@@ -126,5 +126,38 @@ test2-201506-2.spm:
     - name: /tmp/test2-201506-2.spm
     - source: http://10.0.0.204:8081/artifactory/salt-states/tkggo/test2-201506-2.spm
     
-    
+
+
+sudo salt-call state.apply arti
+[WARNING ] /usr/lib/python2.7/site-packages/salt/grains/core.py:1493: DeprecationWarning: The "osmajorrelease" will be a type of an integer.
+
+local:
+----------
+          ID: test2-201506-2.spm
+    Function: file.managed
+        Name: /tmp/test2-201506-2.spm
+      Result: True
+     Comment: File /tmp/test2-201506-2.spm updated
+     Started: 21:59:41.971597
+    Duration: 11.735 ms
+     Changes:
+              ----------
+              diff:
+                  New file
+              mode:
+                  0644
+
+Summary for local
+------------
+Succeeded: 1 (changed=1)
+Failed:    0
+------------
+Total states run:     1
+Total run time:  11.735 ms
+ guo    srv  salt  $  ls /tmp/test2-201506-2.spm
+/tmp/test2-201506-2.spm
+
+
+
+
 ```
