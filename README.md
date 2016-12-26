@@ -5,6 +5,37 @@
 wget https://github.com/bigg01/salt-spm/blob/master/dist/test1-201506-2.spm?raw=true
 spm local install test1-201506-2.spm
 ```
+
+sudo spm local install test1-201506-2.spm
+Package test1 already installed, not installing again
+ guo    tmp  $  sudo spm local remove test1-201506-2.spm
+Invalid local command 'remove'
+ guo    tmp  $  sudo spm remove test1-201506-2.spm
+Removing package test1-201506-2.spm
+Proceed? [N/y] y
+... removing
+package test1-201506-2.spm not installed
+ guo    tmp  $  sudo spm local remove test1-201506-2.spm
+Invalid local command 'remove'
+ guo    tmp  $  sudo spm local install test1-201506-2.spm
+Package test1 already installed, not installing again
+ guo    tmp  $  sudo spm local install test1-201506-2.spm -f
+Installing package from file test1-201506-2.spm
+Proceed? [N/y] y
+... installing
+ guo    tmp  $  tree /srv/spm
+/srv/spm
+├── backup
+│   └── salt
+│       └── myapp
+│           ├── FORMULA
+│           └── test.sls
+├── pillar
+├── reactor
+└── salt
+
+6 directories, 2 files
+
 https://docs.saltstack.com/en/latest/topics/spm/packaging.html
 
 
