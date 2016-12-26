@@ -121,10 +121,12 @@ Total states run:     1
 Total run time:  30.388 ms
 $ sudo salt-call state.apply arti test=True
 $ cat arti.sls
+cat arti.sls
 test2-201506-2.spm:
   file.managed:
     - name: /tmp/test2-201506-2.spm
     - source: http://10.0.0.204:8081/artifactory/salt-states/tkggo/test2-201506-2.spm
+    - source_hash: md5=5bac9b0b139ef3a95ec2102d756fefe1
     
 
 
