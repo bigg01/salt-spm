@@ -25,3 +25,7 @@ curl -uadmin:xxxxxx -T /Users/guo/spm_push/test1-201506-2.spm  "http://localhost
   ```  ```
  curl -uadmin:xxxxxxx -O "http://localhost:8081/artifactory/salt-states/tkggo/test1-201506-2.spm"
   ```
+
+
+
+![arti](arti-test.jpeg)
