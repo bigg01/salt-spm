@@ -2,8 +2,8 @@
 
 
 ```
-wget https://spm.hubblestack.io/nova/hubblestack_nova-2016.10.2-1.spm
-spm local install hubblestack_nova-2016.10.2-1.spm
+wget https://github.com/bigg01/salt-spm/blob/master/dist/test1-201506-2.spm
+spm local install test1-201506-2.spm
 ```
 https://docs.saltstack.com/en/latest/topics/spm/packaging.html
 
