@@ -2,7 +2,7 @@
 
 
 ```
-wget https://github.com/bigg01/salt-spm/blob/master/dist/test1-201506-2.spm?raw=true
+wget -O test1-201506-2.spm https://github.com/bigg01/salt-spm/blob/master/dist/test1-201506-2.spm?raw=true
 spm local install test1-201506-2.spm
 ```
 ```
