@@ -66,6 +66,50 @@ Content-Disposition: attachment; filename="test2-201506-2.spm"; filename*=UTF-8'
 Content-Type: application/octet-stream
 Content-Length: 383
 Date: Mon, 26 Dec 2016 20:56:56 GMT
+
+
+
+#######################
+udo salt-call state.sls artiext
+[WARNING ] /usr/lib/python2.7/site-packages/salt/grains/core.py:1493: DeprecationWarning: The "osmajorrelease" will be a type of an integer.
+
+local:
+----------
+          ID: extract_myapp
+    Function: archive.extracted
+        Name: /tmp/salt
+      Result: True
+     Comment: http://10.0.0.204:8081/artifactory/salt-states/tkggo/test2-201506-2.spm extracted to /tmp/salt/
+     Started: 22:25:20.728975
+    Duration: 130.377 ms
+     Changes:
+              ----------
+              directories_created:
+                  - /tmp/salt/
+              extracted_files:
+                  no tar output so far
+
+Summary for local
+------------
+Succeeded: 1 (changed=1)
+Failed:    0
+------------
+Total states run:     1
+Total run time: 130.377 ms
+ guo    srv  salt  $  ls /tmp/salt/
+test1
+ guo    srv  salt  $  ls /tmp/salt/test1/
+FORMULA  test.sls
+ guo    srv  salt  $  cat artiext
+cat: artiext: No such file or directory
+ guo    srv  salt  $  cat artiext.sls
+extract_myapp:
+  archive.extracted:
+    - name: /tmp/salt
+    - source: http://10.0.0.204:8081/artifactory/salt-states/tkggo/test2-201506-2.spm
+    - archive_format: tar
+    - tar_options: j
+    - source_hash: md5=5bac9b0b139ef3a95ec2102d756fefe1
  
   ```
 
