@@ -5,7 +5,7 @@
 wget https://github.com/bigg01/salt-spm/blob/master/dist/test1-201506-2.spm?raw=true
 spm local install test1-201506-2.spm
 ```
-
+```
 sudo spm local install test1-201506-2.spm
 Package test1 already installed, not installing again
  guo    tmp  $  sudo spm local remove test1-201506-2.spm
@@ -34,7 +34,8 @@ Proceed? [N/y] y
 ├── reactor
 └── salt
 
-6 directories, 2 files```
+6 directories, 2 files
+```
 https://docs.saltstack.com/en/latest/topics/spm/packaging.html
 
 
