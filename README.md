@@ -34,8 +34,7 @@ Proceed? [N/y] y
 ├── reactor
 └── salt
 
-6 directories, 2 files
-
+6 directories, 2 files```
 https://docs.saltstack.com/en/latest/topics/spm/packaging.html
 
 
