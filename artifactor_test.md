@@ -5,7 +5,7 @@ https://www.jfrog.com/confluence/display/RTF/Running+Artifactory+OSS
 
 
   ```
-curl -uadmin:AP7NcSY3p1RzTTQ4c9KeEPppoeD------- -T /Users/guo/spm_push/test1-201506-2.spm  "http://localhost:8081/artifactory/salt-states/tkggo/test1-201506-2.spm"
+curl -uadmin:xxxxxx -T /Users/guo/spm_push/test1-201506-2.spm  "http://localhost:8081/artifactory/salt-states/tkggo/test1-201506-2.spm"
 {
   "repo" : "salt-states",
   "path" : "/tkggo/test1-201506-2.spm",
@@ -23,5 +23,5 @@ curl -uadmin:AP7NcSY3p1RzTTQ4c9KeEPppoeD------- -T /Users/guo/spm_push/test1-201
   "uri" : "http://localhost:8081/artifactory/salt-states/tkggo/test1-201506-2.spm"
   ```
   ```  ```
-curl -uadmin:AP7NcSY3p1RzTTQ4c9KeEPppoeD -O "http://localhost:8081/artifactory/salt-states/<TARGET_FILE_PATH>"
+ curl -uadmin:xxxxxxx -O "http://localhost:8081/artifactory/salt-states/tkggo/test1-201506-2.spm"
   ```
