@@ -48,6 +48,24 @@ curl -uadmin:xxxxxx -T /Users/guo/spm_push/test1-201506-2.spm  "http://localhost
     "md5" : "5bac9b0b139ef3a95ec2102d756fefe1"
   },
   "uri" : "http://10.0.0.204:8081/artifactory/api/storage/salt-states/tkggo/test2-201506-2.spm"
+  
+  
+  
+  
+  curl -I http://10.0.0.204:8081/artifactory/salt-states/tkggo/test2-201506-2.spm
+HTTP/1.1 200 OK
+Server: Artifactory/4.15.0
+X-Artifactory-Id: 520c9d2c15dc7f26:4184f2ce:1593b46336c:-8000
+Last-Modified: Mon, 26 Dec 2016 13:33:10 GMT
+ETag: f8a660d387f9036bc21b0bfb8d5254b5bc5bd5e5
+X-Checksum-Sha1: f8a660d387f9036bc21b0bfb8d5254b5bc5bd5e5
+Accept-Ranges: bytes
+X-Checksum-Md5: 5bac9b0b139ef3a95ec2102d756fefe1
+X-Artifactory-Filename: test2-201506-2.spm
+Content-Disposition: attachment; filename="test2-201506-2.spm"; filename*=UTF-8''test2-201506-2.spm
+Content-Type: application/octet-stream
+Content-Length: 383
+Date: Mon, 26 Dec 2016 20:56:56 GMT
  
   ```
 
