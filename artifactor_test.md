@@ -22,14 +22,40 @@ curl -uadmin:xxxxxx -T /Users/guo/spm_push/test1-201506-2.spm  "http://localhost
   },
   "uri" : "http://localhost:8081/artifactory/salt-states/tkggo/test1-201506-2.spm"
   ```
-  ```  ```
+  ``` 
  curl -uadmin:xxxxxxx -O "http://localhost:8081/artifactory/salt-states/tkggo/test1-201506-2.spm"
+ 
+ #checksum
+ 
+ curl -XGET http://10.0.0.204:8081/artifactory/api/storage/salt-states/tkggo/test2-201506-2.spm
+{
+  "repo" : "salt-states",
+  "path" : "/tkggo/test2-201506-2.spm",
+  "created" : "2016-12-26T13:33:10.519Z",
+  "createdBy" : "admin",
+  "lastModified" : "2016-12-26T13:33:10.513Z",
+  "modifiedBy" : "admin",
+  "lastUpdated" : "2016-12-26T13:33:10.513Z",
+  "downloadUri" : "http://10.0.0.204:8081/artifactory/salt-states/tkggo/test2-201506-2.spm",
+  "mimeType" : "application/octet-stream",
+  "size" : "383",
+  "checksums" : {
+    "sha1" : "f8a660d387f9036bc21b0bfb8d5254b5bc5bd5e5",
+    "md5" : "5bac9b0b139ef3a95ec2102d756fefe1"
+  },
+  "originalChecksums" : {
+    "sha1" : "f8a660d387f9036bc21b0bfb8d5254b5bc5bd5e5",
+    "md5" : "5bac9b0b139ef3a95ec2102d756fefe1"
+  },
+  "uri" : "http://10.0.0.204:8081/artifactory/api/storage/salt-states/tkggo/test2-201506-2.spm"
+ 
   ```
 
 
 
 ![arti](arti-test.jpeg)
-```sudo salt-call state.show_sls arti
+```
+sudo salt-call state.show_sls arti
 [WARNING ] /usr/lib/python2.7/site-packages/salt/grains/core.py:1493: DeprecationWarning: The "osmajorrelease" will be a type of an integer.
 
 local:
@@ -83,3 +109,4 @@ test2-201506-2.spm:
     - source: http://10.0.0.204:8081/artifactory/salt-states/tkggo/test2-201506-2.spm
     
     
+```
