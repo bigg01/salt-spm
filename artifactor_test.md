@@ -29,3 +29,57 @@ curl -uadmin:xxxxxx -T /Users/guo/spm_push/test1-201506-2.spm  "http://localhost
 
 
 ![arti](arti-test.jpeg)
+```sudo salt-call state.show_sls arti
+[WARNING ] /usr/lib/python2.7/site-packages/salt/grains/core.py:1493: DeprecationWarning: The "osmajorrelease" will be a type of an integer.
+
+local:
+    ----------
+    test2-201506-2.spm:
+        ----------
+        __env__:
+            base
+        __sls__:
+            arti
+        file:
+            |_
+              ----------
+              name:
+                  /tmp/test2-201506-2.spm
+            |_
+              ----------
+              source:
+                  http://10.0.0.204:8081/artifactory/salt-states/tkggo/test2-201506-2.spm
+            - managed
+            |_
+              ----------
+              order:
+                  10000
+$ sudo salt-call state.apply arti test=True
+
+
+local:
+----------
+          ID: test2-201506-2.spm
+    Function: file.managed
+        Name: /tmp/test2-201506-2.spm
+      Result: None
+     Comment: The file /tmp/test2-201506-2.spm is set to be changed
+     Started: 21:28:30.874243
+    Duration: 30.388 ms
+     Changes:
+
+Summary for local
+------------
+Succeeded: 1 (unchanged=1)
+Failed:    0
+------------
+Total states run:     1
+Total run time:  30.388 ms
+$ sudo salt-call state.apply arti test=True
+$ cat arti.sls
+test2-201506-2.spm:
+  file.managed:
+    - name: /tmp/test2-201506-2.spm
+    - source: http://10.0.0.204:8081/artifactory/salt-states/tkggo/test2-201506-2.spm
+    
+    
