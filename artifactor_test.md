@@ -1,3 +1,5 @@
+
+
 curl -uadmin:AP7NcSY3p1RzTTQ4c9KeEPppoeD------- -T /Users/guo/spm_push/test1-201506-2.spm  "http://localhost:8081/artifactory/salt-states/tkggo/test1-201506-2.spm"
 {
   "repo" : "salt-states",
@@ -14,3 +16,4 @@ curl -uadmin:AP7NcSY3p1RzTTQ4c9KeEPppoeD------- -T /Users/guo/spm_push/test1-201
   "originalChecksums" : {
   },
   "uri" : "http://localhost:8081/artifactory/salt-states/tkggo/test1-201506-2.spm"
+  ```
