@@ -5,6 +5,8 @@ https://www.jfrog.com/confluence/display/RTF/Running+Artifactory+OSS
  oc new-app docker.bintray.io/jfrog/artifactory-oss:latest
 
  docker exec -it origin oadm policy add-scc-to-user anyuid   system:serviceaccount:myproject:default
+ 
+ oc expose service artifactory-oss  --hostname=artifactory-myproject.openshift.ovhome.local
 
 
   ```
