@@ -2,12 +2,12 @@ setup oss artifactory
 
 https://www.jfrog.com/confluence/display/RTF/Running+Artifactory+OSS
 
- oc new-app docker.bintray.io/jfrog/artifactory-oss:latest
+oc cluster up --public-hostname=lamp.ovhome.local --routing-suffix='openshift.ovhome.local'
 
- docker exec -it origin oadm policy add-scc-to-user anyuid   system:serviceaccount:myproject:default
- 
- oc expose service artifactory-oss  --hostname=artifactory-myproject.openshift.ovhome.local
-
+docker exec -it origin oadm policy add-scc-to-user anyuid   system:serviceaccount:myproject:default
+oc new-app docker.bintray.io/jfrog/artifactory-oss:latest
+oc expose service artifactory-oss
+oc cluster down
 
   ```
 curl -uadmin:xxxxxx -T /Users/guo/spm_push/test1-201506-2.spm  "http://localhost:8081/artifactory/salt-states/tkggo/test1-201506-2.spm"
