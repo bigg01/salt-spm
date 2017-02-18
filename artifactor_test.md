@@ -3,8 +3,11 @@ setup oss artifactory
 https://www.jfrog.com/confluence/display/RTF/Running+Artifactory+OSS
 ```
 oc cluster up --public-hostname=lamp.ovhome.local --routing-suffix='openshift.ovhome.local'
-
+# runany id project
 docker exec -it origin oadm policy add-scc-to-user anyuid   system:serviceaccount:myproject:default
+# be cluster-admin
+ docker exec -it origin oadm policy add-cluster-role-to-user cluster-admin developer
+ 
 oc new-app docker.bintray.io/jfrog/artifactory-oss:latest
 oc expose service artifactory-oss
 oc cluster down
