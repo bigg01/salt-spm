@@ -1,4 +1,5 @@
- $ pepper '*' state.single pkg.removed name=bison   -u http://10.0.0.4:8000 -a pam
+```
+$ pepper '*' state.single pkg.removed name=bison   -u http://10.0.0.4:8000 -a pam
 Username: guo
 Password:
 {
